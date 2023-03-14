@@ -10,10 +10,10 @@ const output = document.getElementById("output_number")
 
 if (firstRandomNumber > secondRandomNumber) {
     console.log("firstRandomNumber")
-    output.innerHTML = ("firstRandomNumber")
+    output.innerHTML = (firstRandomNumber)
 
 } else {
     console.log("secondRandomNumber")
-    output.innerHTML = ("secondRandomNumber")
+    output.innerHTML = (secondRandomNumber)
 }
 

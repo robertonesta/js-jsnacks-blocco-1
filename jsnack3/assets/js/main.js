@@ -7,7 +7,7 @@ Il programma stampa la somma di tutti i numeri inseriti.*/
 let sum = 0
 for (let i = 0; i < 10; i++) {
     let number = Number(prompt("inserisci un numero"))
-    sum += numb
+    sum += number
 }
  console.log(sum)
 

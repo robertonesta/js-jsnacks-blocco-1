@@ -9,11 +9,11 @@ const output = document.getElementById("output_number")
 /*Il software stampa il maggiore.*/
 
 if (firstRandomNumber > secondRandomNumber) {
-    console.log("firstRandomNumber")
+    console.log(firstRandomNumber)
     output.innerHTML = (`il numero più alto è ${firstRandomNumber}`)
 
 } else {
-    console.log("secondRandomNumber")
+    console.log(secondRandomNumber)
     output.innerHTML = (`il numero più alto è ${secondRandomNumber}`)
 }
 

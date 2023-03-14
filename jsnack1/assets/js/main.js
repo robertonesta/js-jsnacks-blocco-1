@@ -10,10 +10,10 @@ const output = document.getElementById("output_number")
 
 if (firstRandomNumber > secondRandomNumber) {
     console.log("firstRandomNumber")
-    output.innerHTML = (firstRandomNumber)
+    output.innerHTML = (`il numero più alto è ${firstRandomNumber}`)
 
 } else {
     console.log("secondRandomNumber")
-    output.innerHTML = (secondRandomNumber)
+    output.innerHTML = (`il numero più alto è ${secondRandomNumber}`)
 }
 

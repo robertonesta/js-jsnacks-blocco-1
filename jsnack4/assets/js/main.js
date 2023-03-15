@@ -18,12 +18,13 @@ for (let i = 0; i = guests.length; i++){
     let guest = guests.length[i];
 
     if (guestname === guest) {
-        access = true;
+        access = true
+        break
     }
 }
 
 if (access){
-    console.log(`ciao ${guestname}, puoi entrare`)
+    console.log(`ciao ${guestname}, benvenuto`)
 } else {
     console.log(`mi dispiace, ${guestname}, non sei tra gli invitati`)
 }

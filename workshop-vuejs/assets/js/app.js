@@ -23,13 +23,21 @@ Man mano che le task vengono completate le visualizziamo in una lista apparte
 const { createApp } = Vue
 
 createApp({
-  data() {
-    return {
-      tasks:[
-        'Learn HTML', 'Learn CSS', 'Learn JS', 'Learn PHP'
-      ]
+    data() {
+        return {
+            newTask: "",
+            tasks:[
+                'Learn HTML', 'Learn CSS', 'Learn JS', 'Learn PHP'
+            ]
+        }
+    },
+    methods:{
+        addTask() {
+            console.log('add the current task to the list')
+            this.tasks.unshift(this.newTask)
+            this.newTask= ""
+        }
     }
-  }
 }).mount('#app')
 
 

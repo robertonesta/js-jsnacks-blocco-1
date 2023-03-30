@@ -17,6 +17,12 @@
             <h1>To do List</h1>
         </header>
         <main>
+
+            <div class="add_tasks">
+                <input type="text" v-model="newTask">
+                <button @click="addTask">Add</button>
+            </div>
+
             <div class="task" v-if="tasks.length > 0">
                 <ul>
                     <li v-for="task in tasks">{{task}}</li>

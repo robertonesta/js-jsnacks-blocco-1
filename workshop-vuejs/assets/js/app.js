@@ -42,6 +42,9 @@ createApp({
             } else {
                 this.error = "la lunghezza della task deve essere almeno di 6 caratteri"
             }
+        },
+        completeTask(i){
+            this.tasks.splice(i, 1)
         }
     }
 }).mount('#app')

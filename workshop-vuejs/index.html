@@ -27,14 +27,15 @@
                 
             </div>
 
-            <div class="task" v-if="tasks.length > 0">
-                <ul>
-                    <li v-for="task in tasks" class="d-flex">{{task}}
-                        <div class="complete">
+            <div class="task">
+                <ul v-if="tasks.length > 0">
+                    <li v-for="(task, index) in tasks" class="d-flex">{{task}}
+                        <div class="complete" @click="completeTask(index)">
                             <i class="fas fa-check-circle fa-sm fa-sw"></i>
                         </div>
                     </li>
                 </ul>
+                <p v-else>task finite</p>
             </div>
 
         </main>

@@ -19,13 +19,21 @@
         <main>
 
             <div class="add_tasks">
-                <input type="text" v-model="newTask">
+                <input type="text" v-model.trim="newTask" @keyup.enter="addTasks()">
                 <button @click="addTask">Add</button>
+                <div class="alert alert-danger" role="alert" v-if="error">
+                    <strong>{{error}}</strong>
+                </div>
+                
             </div>
 
             <div class="task" v-if="tasks.length > 0">
                 <ul>
-                    <li v-for="task in tasks">{{task}}</li>
+                    <li v-for="task in tasks" class="d-flex">{{task}}
+                        <div class="complete">
+                            <i class="fas fa-check-circle fa-sm fa-sw"></i>
+                        </div>
+                    </li>
                 </ul>
             </div>
 

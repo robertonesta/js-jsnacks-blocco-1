@@ -26,6 +26,7 @@ createApp({
     data() {
         return {
             newTask: "",
+            error: null,
             tasks:[
                 'Learn HTML', 'Learn CSS', 'Learn JS', 'Learn PHP'
             ]
@@ -34,8 +35,13 @@ createApp({
     methods:{
         addTask() {
             console.log('add the current task to the list')
-            this.tasks.unshift(this.newTask)
-            this.newTask= ""
+            if (this.newTask.length > 5){
+                this.tasks.unshift(this.newTask)
+                this.newTask = "",
+                this.error = null
+            } else {
+                this.error = "la lunghezza della task deve essere almeno di 6 caratteri"
+            }
         }
     }
 }).mount('#app')

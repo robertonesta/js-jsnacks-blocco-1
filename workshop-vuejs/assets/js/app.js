@@ -29,7 +29,8 @@ createApp({
             error: null,
             tasks:[
                 'Learn HTML', 'Learn CSS', 'Learn JS', 'Learn PHP'
-            ]
+            ],
+            completed:[]
         }
     },
     methods:{
@@ -44,6 +45,7 @@ createApp({
             }
         },
         completeTask(i){
+            this.completed.push(this.tasks[i])
             this.tasks.splice(i, 1)
         }
     }

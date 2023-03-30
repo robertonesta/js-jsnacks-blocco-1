@@ -27,7 +27,8 @@
                 
             </div>
 
-            <div class="task">
+            <div class="tasks">
+                <h2>To do</h2>
                 <ul v-if="tasks.length > 0">
                     <li v-for="(task, index) in tasks" class="d-flex">{{task}}
                         <div class="complete" @click="completeTask(index)">
@@ -36,6 +37,13 @@
                     </li>
                 </ul>
                 <p v-else>task finite</p>
+            </div>
+            <div class="completed" v-if="completed.length > 0">
+                <h2>Completed</h2>
+                <ul>
+                    <li v-for="task in completed">{{task}}</li>
+                </ul>
+
             </div>
 
         </main>
